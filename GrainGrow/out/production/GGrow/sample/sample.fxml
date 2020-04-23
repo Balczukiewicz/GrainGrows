@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <center>
+        <Canvas fx:id="canvas" height="900.0" onMouseClicked="#onMouseClickedListener" width="900.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </Canvas>
+    </center>
+   <left>
+        <AnchorPane maxWidth="150.0" minWidth="150.0" prefHeight="900.0" prefWidth="100.0" style="-fx-background-color: #e6e6e6;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField layoutX="10.0" layoutY="20.0" prefHeight="25.0" prefWidth="60.0" promptText="Width" fx:id="width" />
+                <TextField fx:id="length" layoutX="80.0" layoutY="20.0" prefHeight="25.0" prefWidth="60.0" promptText="Length" />
+                <TextField fx:id="rowGrain" layoutX="10.0" layoutY="61.0" prefHeight="25.0" prefWidth="60.0" promptText="Rows" />
+                <TextField fx:id="colGrain" layoutX="80.0" layoutY="61.0" prefHeight="25.0" prefWidth="60.0" promptText="Columns" />
+                <TextField fx:id="radiusField" layoutX="15.0" layoutY="99.0" prefHeight="25.0" prefWidth="120.0" promptText="Radius" />
+                <TextField fx:id="nogField" layoutX="15.0" layoutY="135.0" prefHeight="25.0" prefWidth="120.0" promptText="Number of grains" />
+                <Button layoutX="15.0" layoutY="167.0" mnemonicParsing="false" onAction="#showbtn" prefHeight="25.0" prefWidth="120.0" text="Show Grid" />
+                <Button layoutX="15.0" layoutY="199.0" mnemonicParsing="false" onAction="#clearBtn" prefHeight="25.0" prefWidth="120.0" text="CLEAR" />
+                <Button layoutX="15.0" layoutY="295.0" mnemonicParsing="false" onAction="#radiusBtn" prefHeight="25.0" prefWidth="120.0" text="Radius" />
+                <Button layoutX="15.0" layoutY="235.0" mnemonicParsing="false" onAction="#homoBtn" prefHeight="25.0" prefWidth="120.0" text="Homogeneous" />
+                <Button layoutX="15.0" layoutY="265.0" mnemonicParsing="false" onAction="#randomBtn" prefHeight="25.0" prefWidth="120.0" text="Random" />
+                <CheckBox fx:id="periodicCB" layoutX="20.0" layoutY="335.0" mnemonicParsing="false" text="Periodic" />
+                <CheckBox fx:id="absorbingCB" layoutX="20.0" layoutY="365.0" mnemonicParsing="false" text="Absorbing" />
+                <CheckBox fx:id="vonNeumannCB" layoutX="20.0" layoutY="415.0" mnemonicParsing="false" text="Von Neumann" />
+                <CheckBox fx:id="mooreCB" layoutX="20.0" layoutY="440.0" mnemonicParsing="false" text="Moore" />
+                <CheckBox fx:id="hexCB" layoutX="20.0" layoutY="465.0" mnemonicParsing="false" text="Hex" />
+                <CheckBox fx:id="pentCB" layoutX="20.0" layoutY="490.0" mnemonicParsing="false" text="Pent" />
+
+                <Button layoutX="10.0" layoutY="550.0" mnemonicParsing="false" onAction="#startBtn" prefHeight="25.0" prefWidth="60.0" text="START" />
+                <Button layoutX="80.0" layoutY="550.0" mnemonicParsing="false" onAction="#stopBtn" prefHeight="25.0" prefWidth="60.0" text="STOP" />
+            </children>
+        </AnchorPane>
+   </left>
+</BorderPane>
